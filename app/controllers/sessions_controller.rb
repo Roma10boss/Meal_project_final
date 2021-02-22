@@ -39,6 +39,10 @@ class SessionsController < ApplicationController
     redirect_to meal_plans_path if logged_in?
   end
 
+  def about
+    puts " Thank you for visiting ypour meal tracker!"
+  end 
+
   private
     def auth
       request.env['omniauth.auth']

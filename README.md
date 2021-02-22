@@ -17,7 +17,7 @@ To run this app:
   1) clone the repo and run bundle install 
   2) rake db:migrate  
   3)rake db:seed
-   Then run rails s to start server, the app running on localhost:3000.
+  Then run rails s to start server, the app running on localhost:3000.
 
 ## Contributing
 

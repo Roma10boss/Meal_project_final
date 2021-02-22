@@ -8,18 +8,17 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
 
   get '/auth/facebook/callback' => 'sessions#fbcreate'
-
-
+  get '/about' => 'sessions#about'
   resources :users
   resources :meal_plans
   resources :meals, only: [:edit, :index, :show ]
   resources :meal_schedules
 
   resources :meal_plans do
-    resources :meal_schedules, only: [:new, :index, :create]
+  resources :meal_schedules, only: [:new, :index, :create]
   end
 
   resources :meals do
-    resources :meal_schedules, only: [:new, :index, :create]
+  resources :meal_schedules, only: [:new, :index, :create]
   end
 end

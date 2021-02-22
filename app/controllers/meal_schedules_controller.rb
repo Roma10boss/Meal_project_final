@@ -48,6 +48,7 @@ class MealSchedulesController < ApplicationController
   end
 
   def destroy
+    @meal_schedule= MealSchedule.find(params[:id])
     @meal_schedule.destroy
     flash[:success] = "Your meal schedule was deleted!"
     redirect_to meal_schedules_path
